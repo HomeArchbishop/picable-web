@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picable</title>
+
+    <style>
+      body {
+        background: #f6f6f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prepare-layer" id="prepareLayer">
+      <style>
+        .prepare-layer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          z-index: 1000;
+          top: 0;
+          height: 100vh;
+          left: 0;
+          width: 100vw;
+          user-select: none;
+          box-sizing: border-box;
+        }
+        .prepare-layer > .prepare-content {
+          text-align: center;
+        }
+        .prepare-layer > .prepare-content > .big-emoji {
+          font-size: 10em;
+        }
+        .prepare-layer > .prepare-content svg.logo-text {
+          margin: auto;
+          width: 200px;
+        }
+        .prepare-layer > .prepare-content svg.logo-text > text {
+          fill: #d66e9e;
+          font-family: "Font Awesome 6 Solid";
+          text-transform: uppercase;
+          animation: stroke 1.3s;
+          letter-spacing: 10px;
+          font-weight: 900;
+          font-size: 2em;
+        }
+        @keyframes stroke {
+          0% {
+            fill: transparent;
+            stroke: #d66e9e;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 0.8;
+          }
+          50% {
+            fill: transparent;
+            stroke: #d66e9e;
+            stroke-width: 1.2;
+            font-size: 2em;
+          }
+          80% {
+            fill: transparent;
+            stroke: #d66e9e;
+            stroke-width: 1.5;
+          }
+          90%,
+          100% {
+            fill: #d66e9e;
+            stroke: transparent;
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+          }
+        }
+      </style>
+      <div class="prepare-content">
+        <!-- <div class="big-emoji" id="prepareEmoji"></div>
+        <script>
+          document.querySelector('#prepareEmoji').innerHTML = [
+            '🤔', '🤣', '🧐', '🤩', '🍉', '🍊', '🍋', '🥥', '🥝'
+          ][~~(Math.random() * 9)]
+        </script> -->
+        <svg class="logo-text">
+          <text y="50%">Picable</text>
+        </svg>
+      </div>
+    </div>
+
+    <div id="app"></div>
+
+    <script>
+      console.info(
+        `%c Picable %c 简洁美观的哔咔漫画客户端 %c`,
+        'background: #d66e9e; padding: 8px; border-radius: 3px 0 0 3px; color: #fff;',
+        'background: #35495e; padding: 8px; border-radius: 0 3px 3px 0; color: #fff;',
+        'background:transparent'
+      )
+      console.info(
+        '‣ Picable 官网 https://picable.top'
+      )
+      console.info(
+        '%c Picable 项目源码 (MIT)\n' +
+        '  ‣ 桌面网页源码 https://github.com/HomeArchbishop/picable-web\n' +
+        '  ‣ 桌面软件源码 https://github.com/HomeArchbishop/picable',
+        'color: #d66e9e90; padding: 2px 0;'
+      )
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

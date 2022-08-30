@@ -1,0 +1,62 @@
+html {
+  background: @background-main;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  // font-family: ChineseFont, EnglishFont, Apple Color Emoji, Segoe UI Emoji, system-ui, sans-serif;
+  font-display: block;
+  color: @color-font-default;
+  background: @background-main;
+  overflow: scroll;
+  // min-width: 800px;
+  // min-height: 600px;
+
+  &.blur {
+    filter: blur(30px);
+  }
+}
+
+div {
+  box-sizing: border-box !important;
+}
+
+a {
+  color: @color-theme;
+}
+
+p {
+  opacity: .78;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/**
+ * scrollbar
+*/
+::-webkit-resizer, ::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+  border-radius: 4px;
+  background-color: transparent;
+}
+::-webkit-scroll-track, ::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-resizer, ::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b6b5b5;
+  opacity: .7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
