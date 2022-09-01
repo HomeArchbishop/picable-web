@@ -7,7 +7,7 @@
 <p align="center">
   在线地址：<a href="https://web.picable.top">web.picable.top</a>
   <br>
-  项目官网：<a href="https://picable.top">web.picable.top</a>
+  项目官网：<a href="https://picable.top">picable.top</a>
 </p>
 
 ## 说明
